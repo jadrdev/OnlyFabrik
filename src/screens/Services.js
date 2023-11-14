@@ -246,10 +246,9 @@ const styles = StyleSheet.create({
     width: 50,
   },
   center: {
-    paddingHorizontal: 20,
+    paddingVertical: 10,
     flexDirection: 'row',
     justifyContent: 'center',
-    paddingBottom: 2,
   },
   text: {
     fontSize: 15,
