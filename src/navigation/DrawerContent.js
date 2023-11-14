@@ -1,10 +1,12 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { DrawerContentScrollView } from '@react-navigation/drawer';
-import { Avatar, Title, Caption, Drawer } from 'react-native-paper';
+import { Avatar, Title, Caption, Drawer, useTheme } from 'react-native-paper';
+import StringConstants from '../utils/AppStringContants';
 
 export default function DrawerContent(props) {
   const { navigation } = props;
+  const { colors } = useTheme();
   return (
     <DrawerContentScrollView>
       <View style={styles.drawerContent} />
@@ -12,52 +14,53 @@ export default function DrawerContent(props) {
         <Avatar.Image
           style={styles.avatar}
           source={{
-            uri:
-              'https://fabrikbarber.com/wp-content/uploads/2019/06/Fabrik-Barber-monocolor2.png',
+            uri: StringConstants.APP_URI_LOGO,
           }}
           size={150}
         />
-        <Title style={styles.title}>Fabrik Barber</Title>
-        <Caption style={styles.caption}>#OnlyFabrik</Caption>
+        <Title style={colors.primary}>{StringConstants.APP_NAME}</Title>
+        <Caption style={styles.caption}>
+          {StringConstants.APP_DESCRIPTION}
+        </Caption>
       </View>
       <Drawer.Section>
         <Drawer.Item
-          label="Inicio"
+          label={StringConstants.HOME}
           onPress={() => navigation.navigate('home')}
           icon="home"
         />
         <Drawer.Item
-          label="Barberos"
+          label={StringConstants.BARBERS}
           onPress={() => navigation.navigate('barbers')}
           icon="account"
         />
         <Drawer.Item
-          label="Horarios"
+          label={StringConstants.SCHEDULE}
           onPress={() => navigation.navigate('horario')}
           icon="clock"
         />
         <Drawer.Item
-          label="Servicios"
+          label={StringConstants.SERVICES}
           onPress={() => navigation.navigate('service')}
           icon="content-cut"
         />
         <Drawer.Item
-          label="Pedir Cita"
+          label={StringConstants.BOOKING}
           onPress={() => navigation.navigate('booking')}
           icon="calendar"
         />
         <Drawer.Item
-          label="Barberia"
+          label={StringConstants.BARBER}
           onPress={() => navigation.navigate('barber')}
           icon="home"
         />
         <Drawer.Item
-          label="Tienda"
+          label={StringConstants.SHOP}
           onPress={() => navigation.navigate('shop')}
           icon="home"
         />
         <Drawer.Item
-          label="Contactar"
+          label={StringConstants.CONTACT}
           onPress={() => navigation.navigate('contact')}
           icon="mail"
         />
