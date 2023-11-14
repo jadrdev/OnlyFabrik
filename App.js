@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import Navigation from './src/navigation/Navigation';
 import { StatusBar, Platform, LogBox } from 'react-native';
-import { Provider as PaperProvider } from 'react-native-paper';
+import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
 import SplashScreen from 'react-native-splash-screen';
 import { requestTrackingPermission } from 'react-native-tracking-transparency';
 
@@ -23,9 +23,19 @@ export default function App() {
     SplashScreen.hide();
   }, []);
 
+  const theme = {
+    ...DefaultTheme,
+    roundness: 2,
+    colors: {
+      ...DefaultTheme.colors,
+      primary: '#000',
+      accent: '#f1c40f',
+    },
+  };
+
   return (
     <>
-      <PaperProvider>
+      <PaperProvider theme={theme}>
         {Platform.OS === 'ios' && <StatusBar barStyle="dark-content" />}
         <NavigationContainer>
           <Navigation />
