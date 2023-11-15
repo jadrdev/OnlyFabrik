@@ -17,6 +17,8 @@ export default {
   BARBER: 'Barberia',
   SHOP: 'Tienda',
   CONTACT: 'Contactar',
+  FACEBOOK: 'Facebook',
+  INSTAGRAM: 'Instagram',
 
   // Home
   // Barberos

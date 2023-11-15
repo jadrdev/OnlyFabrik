@@ -8,6 +8,7 @@ import {
   Linking,
   Text,
 } from 'react-native';
+import AppStringContants from '../utils/AppStringContants';
 export default function Home(props) {
   const { navigation } = props;
   return (
@@ -26,7 +27,9 @@ export default function Home(props) {
                 style={styles.imagenInterior}
                 source={require('../assets/png/cita.png')}
               />
-              <Text style={styles.TextInterior}>Pedir Cita</Text>
+              <Text style={styles.TextInterior}>
+                {AppStringContants.BOOKING}
+              </Text>
             </View>
           </TouchableOpacity>
         </View>
@@ -75,7 +78,7 @@ export default function Home(props) {
                 style={styles.imagenInterior}
                 source={require('../assets/png/shop.png')}
               />
-              <Text style={styles.TextInterior}>Tienda</Text>
+              <Text style={styles.TextInterior}>{AppStringContants.SHOP}</Text>
             </View>
           </TouchableOpacity>
         </View>
@@ -90,7 +93,9 @@ export default function Home(props) {
                 style={styles.imagenInterior2}
                 source={require('../assets/png/facebook.png')}
               />
-              <Text style={styles.TextInterior2}>Facebook</Text>
+              <Text style={styles.TextInterior2}>
+                {AppStringContants.FACEBOOK}
+              </Text>
             </View>
           </TouchableOpacity>
           <TouchableOpacity
@@ -105,7 +110,9 @@ export default function Home(props) {
                 style={styles.imagenInterior2}
                 source={require('../assets/png/instagram.png')}
               />
-              <Text style={styles.TextInterior2}>Instagram</Text>
+              <Text style={styles.TextInterior2}>
+                {AppStringContants.INSTAGRAM}
+              </Text>
             </View>
           </TouchableOpacity>
         </View>
@@ -118,7 +125,9 @@ export default function Home(props) {
                 style={styles.imagenInterior}
                 source={require('../assets/png/signo-de-peluquero.png')}
               />
-              <Text style={styles.TextInterior}>Contactar</Text>
+              <Text style={styles.TextInterior}>
+                {AppStringContants.CONTACT}
+              </Text>
             </View>
           </TouchableOpacity>
         </View>
