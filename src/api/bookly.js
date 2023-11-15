@@ -11,7 +11,6 @@ export function getAllCategoryServices() {
       return result;
     });
 }
-//Creamos la función para extraer los servicios
 export function getAllServices() {
   const url = `${BaseURL}/wpo_bookly_services`;
   // Montamos la url que necesita Moviedb para devolvernos el resultado
@@ -24,7 +23,6 @@ export function getAllServices() {
       return result;
     });
 }
-//Creamos la función para extraer al equipo
 export function getAllStaff() {
   const url = `${BaseURL}/wpo_bookly_staff`;
   // Montamos la url que necesita Moviedb para devolvernos el resultado
@@ -37,7 +35,6 @@ export function getAllStaff() {
       return result;
     });
 }
-//Creamos la función para extraer al equipo
 export function getAllDayFree(idstaff, idservice, date) {
   const url = `${BaseURL}/wpo_bookly_timeslots?staffid=${idstaff}&serviceid=${idservice}&date=${date}`;
   // Montamos la url que necesita Moviedb para devolvernos el resultado
@@ -51,7 +48,6 @@ export function getAllDayFree(idstaff, idservice, date) {
     });
 }
 
-//Creamos la función para extraer al equipo
 export function InsertCita(parametros) {
   const url = `${BaseURL}/wpo_bookly_appointments`;
   // Montamos la url que necesita Moviedb para devolvernos el resultado

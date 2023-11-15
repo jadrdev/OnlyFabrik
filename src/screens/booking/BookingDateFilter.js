@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import {
   StyleSheet,
   Image,
@@ -8,7 +8,7 @@ import {
   ScrollView,
 } from 'react-native';
 import { Button } from 'react-native-paper';
-import { getAllDayFree } from '../api/bookly';
+import { getAllDayFree } from '../../api/bookly';
 import moment from 'moment';
 import { map } from 'lodash';
 
@@ -51,7 +51,7 @@ export default function BookingDateFilter(props) {
     <>
       <Image
         style={styles.banner}
-        source={require('../assets/png/banner-booking.png')}
+        source={require('.../assets/png/banner-booking.png')}
       />
       <Image
         style={styles.divisor}

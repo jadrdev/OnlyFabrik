@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { StyleSheet, Image, Text, View, ScrollView } from 'react-native';
-import { InsertarClientes } from '../api/bookly';
+import { InsertarClientes } from '../../api/bookly';
 import { Button, TextInput } from 'react-native-paper';
 import { useForm, Controller } from 'react-hook-form';
-import { debug, CustomerId } from '../utils/constants';
+import { debug, CustomerId } from '../../utils/constants';
 import moment from 'moment';
 
 let customer = {

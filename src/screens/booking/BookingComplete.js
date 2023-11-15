@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { StyleSheet, Image, Text, View } from 'react-native';
 import { Button } from 'react-native-paper';
-import { InsertCita } from '../api/bookly';
+import { InsertCita } from '../../api/bookly';
 
 export default function BookingComplete(props) {
   const { navigation, route } = props;

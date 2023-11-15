@@ -6,8 +6,8 @@ import {
   getAllCategoryServices,
   getAllServices,
   getAllStaff,
-} from '../api/bookly';
-import { debug, BarberoDebug } from '../utils/constants';
+} from '../../api/bookly';
+import { debug, BarberoDebug } from '../../utils/constants';
 
 let servicioList = [];
 let barberoList = [];
@@ -124,7 +124,9 @@ export default function Booking(props) {
 
   useEffect(() => {
     getAllCategoryServices().then((response) => {
-      fillCategorias(response);
+      if (response.length > 0) {
+        fillCategorias(response);
+      }
     });
   }, []);
 
@@ -150,6 +152,7 @@ export default function Booking(props) {
 
   const fillCategorias = (categorias) => {
     categorias.forEach((element) => {
+      element.category_id.name === null ? null : null;
       let newObj = {
         label: element.category_id.name,
         value: element.category_id.id,
@@ -241,11 +244,11 @@ export default function Booking(props) {
     <>
       <Image
         style={styles.banner}
-        source={require('../assets/png/banner-booking.png')}
+        source={require('.../assets/png/banner-booking.png')}
       />
       <Image
         style={styles.divisor}
-        source={require('../assets/png/divisor.png')}
+        source={require('.../assets/png/divisor.png')}
       />
       <View style={styles.VTeam}>
         <Text style={styles.FTeam}>¿Cuándo quieres venir en Fabrik?</Text>
